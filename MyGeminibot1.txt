@@ -1,1 +1,28 @@
+ผมต้องการสร้าง Line OA เพื่อให้ผู้ใช้งานคุยกับ gemini ด้วย Google Apps Script
+ตอนนี้ผมสร้าง LINE OA เรียบร้อยแล้ว
+มีการเก็บ CHANNEL_ACCESS_TOKEN และ GEMINI_API_KEY ไว้ใน Script Properties
+ทั้งนี้ผมมี Code สำหรับ Debug ที่ใช้งานได้อยู่ในไฟลที่ชื่่อ 'Comment.gs' รายละเอียด code แบบนี้
+//ID: 1DSyxam1ceq72bMHsE6aOVeOl94X78WCwiYPytKi7chlg4x5GqiNXSw0l
 
+var log = BetterLog.useSpreadsheet();
+function testBetterLog() {
+  var log = BetterLog.useSpreadsheet();
+  log.log("🔵 นี่คือ log ปกติ (log)");
+  log.info("🟢 นี่คือ log ระดับ info");
+  
+  // แทน .warn() → ใช้ .info()
+  log.info("🟠 นี่คือ log ระดับ warn (จำลอง)");
+  
+  // แทน .error() → ใช้ .info()
+  log.info("🔴 นี่คือ log ระดับ error (จำลอง)");
+  
+  var sampleData = {
+    name: "Samart",
+    project: "BetterLog Test",
+    time: new Date()
+  };
+  log.log("📦 ตัวอย่าง object:", JSON.stringify(sampleData));
+  Logger.log("✅ ทดสอบ BetterLog เสร็จแล้ว!");
+}
+
+คุณช่วยเขียน Code เพื่อให้ทำงานได้ไว้ในไฟล 'Code.gs'ครับ
